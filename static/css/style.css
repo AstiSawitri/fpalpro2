@@ -1,0 +1,1008 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-align: justify;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Styling untuk logo */
+.logo img {
+    position: fixed;
+    top: 1px;
+    left: 76px;
+    z-index: 1000; /* Stay on top */
+    width: 150px;
+    transition: transform 0.3s ease;
+    height: auto;
+}
+
+.logo img:hover {
+    transform: scale(1.1); /* Membuat logo membesar sedikit saat hover */
+}
+
+body {
+    background: linear-gradient(to bottom right, #d4e6f1, #f8cce7, #fef9c3);
+    color: #333;
+    line-height: 1.6;
+    overflow-x: hidden;
+    min-height: 100vh;
+}
+
+/* Styling Text Section */
+.text-section {
+    font-size: 0.9rem; /* Ukuran font lebih kecil */
+    line-height: 1.6; /* Menambah jarak antar baris agar nyaman dibaca */
+    text-align: justify; /* Membuat teks justify */
+    color: #333; /* Warna teks */
+    max-width: 800px; /* Batasi lebar teks agar tidak terlalu panjang */
+    margin: 0 auto; /* Pusatkan teks jika di dalam container */
+    padding: 10px 20px; /* Padding kiri dan kanan */
+}
+
+/* HEADER SECTION */
+header {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start; /* Posisi ke kiri */
+    text-align: left; /* Rata kiri */
+    padding: 0 5rem; /* Padding kiri dan kanan */
+    color: #0d4c5f; /* Dark teal untuk kontras */
+}
+
+header h1 {
+    font-size: 6.6rem;
+    font-weight: bold;
+    font-style: italic;
+    color: #0d4c5f;
+    margin-bottom: 1rem;
+}
+
+header p {
+    max-width: 600px;
+    margin-bottom: 2rem;
+    color: #555;
+    text-align: justify;
+    line-height: 1.8;
+    font-size: 0.9rem;
+}
+
+/* Navigation Bar */
+/* Updated Navbar */
+.navbar {
+    position: fixed; /* Fix the navbar to the top */
+    top: 20px;
+    right: 76px;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    background-color: #fffacd;
+    padding: 10px 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000; /* Ensure it's above all other content */
+}
+
+/* NAVBAR LINKS */
+.navbar a {
+    text-decoration: none;
+    color: #0d4c5f; /* Warna teks */
+    font-weight: bold;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+    color: #e63946; /* Warna hover */
+}
+
+/* Search Box */
+.search-box {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: white;
+    padding: 5px 10px;
+    border-radius: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.search-box input {
+    border: none;
+    outline: none;
+    padding: 5px;
+    font-size: 1rem;
+}
+
+.search-box button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    color: #333;
+    font-size: 1rem;
+}
+
+/* BUTTON */
+.btn-primary {
+    background-color: #fffacd; /* Soft Yellow */
+    color: #cd5278;
+    border: 2px solid #ddd;
+    padding: 10px 40px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.btn-primary:hover {
+    background-color: #f7e38d;
+    border-color: #f7e38d;
+    color: #333;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #0d4c5f;
+    color: #fff;
+    position: relative;
+}
+
+footer a {
+    color: #fdf4a4;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+.card img {
+    max-width: 10%; /* Tidak melebihi lebar parent */
+    height: auto; /* Menjaga rasio gambar */
+    object-fit: cover; /* Menyesuaikan gambar tanpa distorsi */
+    border-radius: 10px; /* Tambahkan sudut bulat untuk estetika */
+}
+
+
+/* Background Hijau untuk Card Container */
+/* Container Hijau untuk Judul */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem; /* Jarak antar kartu */
+    padding: 30px;
+    background-color: #2a5d53; /* Warna hijau tua */
+    border-radius: 20px;
+    margin: 11rem auto;
+    max-width: 2000px;
+}
+
+
+/* Card: Styling setiap kotak */
+/* Card */
+.card {
+    position: relative; /* Agar tombol bisa absolut terhadap card */
+    background-color: #eaf9e5;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 250px;
+    padding: 1rem;n: center;
+    max-width: 250px;
+    padding: 1rem; /* Padding dalam kartu */
+    overflow: hidden;
+    transition: transform 0.3s ease; /* Efek hover */
+}
+
+
+/* Deskripsi agar tetap di tengah */
+.card p {
+    margin-bottom: 3rem; /* Beri ruang untuk tombol di bawah */
+}
+
+/* Styling Button */
+.card a button {
+    position: absolute; /* Tombol selalu di bawah */
+    bottom: 1rem; /* Jarak dari bawah */
+    left: 50%; /* Pusatkan horizontal */
+    text-align: center;
+    transform: translateX(-50%); /* Koreksi posisi horizontal */
+    background-color: #cd5278;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 0.3rem 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.card a button:hover {
+    background-color: #b0446b;
+}
+
+.card:hover {
+    transform: translateY(-10px); /* Efek hover */
+}
+
+.card:hover {
+    transform: translateY(-10px); /* Mengangkat kartu saat di-hover */
+}
+
+/* Card Image: Ukuran gambar */
+.card img {
+    max-width: 100%; /* Pastikan gambar menyesuaikan lebar kartu */
+    height: 180px; /* Tinggi gambar konsisten */
+    object-fit: cover; /* Pastikan gambar rapi tanpa distorsi */
+    border-radius: 8px; /* Sudut lembut */
+    margin-top: 2rem;
+    margin-bottom: 1rem; /* Jarak ke teks bawah */
+}
+
+/* Styling untuk Subjudul (Story Sharing, Resources, dll) */
+.card h3 {
+    position: absolute;
+    top: 1px;
+    left: 0;
+    right: 0;
+    color: #2a5d53; /* Warna hijau gelap */
+    padding: 0.5rem 0;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+    z-index: 10;
+    border-radius: 10px 10px 0 0; /* Sudut lembut di atas */
+}
+
+/* Styling untuk Judul "What We Do" */
+.section-title {
+    font-size: 4rem; /* Ukuran besar */
+    font-weight: bold;
+    text-align: center;
+    color: #fffacd; /* Warna kuning */
+    margin-bottom: 1.5rem;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%); /* Pusatkan secara horizontal */
+    padding: 5rem 1rem; /* Ruang di dalam */
+    border-radius: 10px;
+}/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-align: justify;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Styling untuk logo */
+.logo img {
+    position: fixed;
+    top: 1px;
+    left: 76px;
+    z-index: 1000; /* Stay on top */
+    width: 150px;
+    transition: transform 0.3s ease;
+    height: auto;
+}
+
+.logo img:hover {
+    transform: scale(1.1); /* Membuat logo membesar sedikit saat hover */
+}
+
+body {
+    background: linear-gradient(to bottom right, #d4e6f1, #f8cce7, #fef9c3);
+    color: #333;
+    line-height: 1.6;
+    overflow-x: hidden;
+    min-height: 100vh;
+}
+
+/* Styling Text Section */
+.text-section {
+    font-size: 0.9rem; /* Ukuran font lebih kecil */
+    line-height: 1.6; /* Menambah jarak antar baris agar nyaman dibaca */
+    text-align: justify; /* Membuat teks justify */
+    color: #333; /* Warna teks */
+    max-width: 800px; /* Batasi lebar teks agar tidak terlalu panjang */
+    margin: 0 auto; /* Pusatkan teks jika di dalam container */
+    padding: 10px 20px; /* Padding kiri dan kanan */
+}
+
+/* HEADER SECTION */
+header {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start; /* Posisi ke kiri */
+    text-align: left; /* Rata kiri */
+    padding: 0 5rem; /* Padding kiri dan kanan */
+    color: #0d4c5f; /* Dark teal untuk kontras */
+}
+
+header h1 {
+    font-size: 6.6rem;
+    font-weight: bold;
+    font-style: italic;
+    color: #0d4c5f;
+    margin-bottom: 1rem;
+}
+
+header p {
+    max-width: 600px;
+    margin-bottom: 2rem;
+    color: #555;
+    text-align: justify;
+    line-height: 1.8;
+    font-size: 0.9rem;
+}
+
+/* Navigation Bar */
+/* Updated Navbar */
+.navbar {
+    position: fixed; /* Fix the navbar to the top */
+    top: 20px;
+    right: 76px;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    background-color: #fffacd;
+    padding: 10px 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000; /* Ensure it's above all other content */
+}
+
+/* NAVBAR LINKS */
+.navbar a {
+    text-decoration: none;
+    color: #0d4c5f; /* Warna teks */
+    font-weight: bold;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+    color: #e63946; /* Warna hover */
+}
+
+/* Search Box */
+.search-box {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: white;
+    padding: 5px 10px;
+    border-radius: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.search-box input {
+    border: none;
+    outline: none;
+    padding: 5px;
+    font-size: 1rem;
+}
+
+.search-box button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    color: #333;
+    font-size: 1rem;
+}
+
+/* BUTTON */
+.btn-primary {
+    background-color: #fffacd; /* Soft Yellow */
+    color: #cd5278;
+    border: 2px solid #ddd;
+    padding: 10px 40px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.btn-primary:hover {
+    background-color: #f7e38d;
+    border-color: #f7e38d;
+    color: #333;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #0d4c5f;
+    color: #fff;
+    position: relative;
+}
+
+footer a {
+    color: #fdf4a4;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+.card img {
+    max-width: 10%; /* Tidak melebihi lebar parent */
+    height: auto; /* Menjaga rasio gambar */
+    object-fit: cover; /* Menyesuaikan gambar tanpa distorsi */
+    border-radius: 10px; /* Tambahkan sudut bulat untuk estetika */
+}
+
+/* Card Container: Membuat layout rapi dalam baris */
+.card-container {
+    display: flex; /* Mengatur elemen anak dalam satu baris */
+    flex-wrap: wrap; /* Jika layar kecil, elemen akan pindah ke baris berikutnya */
+    justify-content: center; /* Pusatkan elemen dalam kontainer */
+    gap: 2rem; /* Jarak antar kartu */
+    padding: 2rem;
+}
+
+/* Background Hijau untuk Card Container */
+/* Container Hijau untuk Judul */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem; /* Jarak antar kartu */
+    padding: 2rem;
+    background-color: #2a5d53; /* Warna hijau tua */
+    border-radius: 20px;
+    margin: 11rem auto;
+    max-width: 2000px;
+}
+
+
+/* Card: Styling setiap kotak */
+/* Card */
+.card {
+    position: relative; /* Agar tombol bisa absolut terhadap card */
+    background-color: #eaf9e5;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 250px;
+    padding: 1rem;n: center;
+    max-width: 250px;
+    padding: 1rem; /* Padding dalam kartu */
+    overflow: hidden;
+    transition: transform 0.3s ease; /* Efek hover */
+}
+
+
+/* Deskripsi agar tetap di tengah */
+.card p {
+    margin-bottom: 3rem; /* Beri ruang untuk tombol di bawah */
+}
+
+/* Styling Button */
+.card a button {
+    position: absolute; /* Tombol selalu di bawah */
+    bottom: 1rem; /* Jarak dari bawah */
+    left: 50%; /* Pusatkan horizontal */
+    text-align: center;
+    transform: translateX(-50%); /* Koreksi posisi horizontal */
+    background-color: #cd5278;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 0.3rem 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.card a button:hover {
+    background-color: #b0446b;
+}
+
+.card:hover {
+    transform: translateY(-10px); /* Efek hover */
+}
+
+.card:hover {
+    transform: translateY(-10px); /* Mengangkat kartu saat di-hover */
+}
+
+/* Card Image: Ukuran gambar */
+.card img {
+    max-width: 100%; /* Pastikan gambar menyesuaikan lebar kartu */
+    height: 180px; /* Tinggi gambar konsisten */
+    object-fit: cover; /* Pastikan gambar rapi tanpa distorsi */
+    border-radius: 8px; /* Sudut lembut */
+    margin-top: 2rem;
+    margin-bottom: 1rem; /* Jarak ke teks bawah */
+}
+
+/* Styling untuk Subjudul (Story Sharing, Resources, dll) */
+.card h3 {
+    position: absolute;
+    top: 1px;
+    left: 0;
+    right: 0;
+    color: #2a5d53; /* Warna hijau gelap */
+    padding: 0.5rem 0;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+    z-index: 10;
+    border-radius: 10px 10px 0 0; /* Sudut lembut di atas */
+}
+
+/* Styling untuk Judul "What We Do" */
+.section-title {
+    font-size: 4rem; /* Ukuran besar */
+    font-weight: bold;
+    text-align: center;
+    color: #fffacd; /* Warna kuning */
+    margin-bottom: 1.5rem;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%); /* Pusatkan secara horizontal */
+    padding: 5rem 1rem; /* Ruang di dalam */
+    border-radius: 10px;
+}
+
+/* Form Container */
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align to top */
+    height: 100vh; /* Ensure full viewport height */
+    padding-top: 3rem; /* Add top padding to move it up */
+    margin-top: -50px; /* Adjust margin to fine-tune position */
+}
+
+.form-box {
+    background-color: #fffacd;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    padding: 1.5rem; /* Reduce padding */
+    max-width: 700px;
+    width: 100%;
+    margin-top: 3rem; /* Push it down slightly */
+    margin-bottom: 2rem; /* Add space at the bottom */
+    text-align: left;
+}
+
+.form-box textarea {
+    height: 120px; /* Shorter textarea */
+}
+
+.form-box h1 {
+    font-size: 2.5rem;
+    color: #cd5278;
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+.form-box label {
+    display: block;
+    color: #2a5d53;
+    font-weight: bold;
+}
+
+.form-box input,
+.form-box textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 1.5rem;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    outline: none;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.form-box input:focus,
+.form-box textarea:focus {
+    border-color: #cd5278;
+}
+
+/* Checkbox Options */
+/* Checkbox Options */
+.checkbox-options {
+    display: flex;
+    flex-direction: column; /* Stack checkboxes vertically */
+    gap: 0.3rem; /* Reduce spacing between checkboxes */
+    margin-top: 0.3rem; /* Reduce gap to message box */
+    margin-bottom: 1rem; /* Add spacing before the submit button */
+}
+
+.checkbox-options label {
+    display: flex;
+    align-items: center; /* Align checkbox and text vertically */
+    gap: 0.4rem; /* Reduce gap between checkbox and text */
+    font-size: 0.85rem; /* Slightly smaller font size */
+    color: #333;
+    line-height: 1.2;
+}
+
+.checkbox-options input[type="checkbox"] {
+    margin: 0; /* Remove default checkbox margins */
+    width: 14px; /* Set checkbox width */
+    height: 14px; /* Set checkbox height */
+}
+
+.btn-submit {
+    display: inline-block;
+    background-color: #cd5278;
+    color: white;
+    padding: 10px 30px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.btn-submit:hover {
+    background-color: #b0446b;
+    transform: translateY(-3px);
+}
+
+/* Output Box Styling */
+.output-box {
+    text-align: center;
+    margin: 1rem 0;
+    color: #333;
+}
+
+.output-box h2 {
+    font-size: 1.2rem;
+    color: #2a5d53;
+}
+
+.output-box p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 3rem;
+    color: #555;
+}
+
+.output-box h3 {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    color: #0d4c5f;
+}
+
+/* Resource Cards */
+.output-resources {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.output-resources .card {
+    background-color: #eaf9e5;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 1rem;
+    width: 50%;
+    transition: transform 0.3s ease;
+}
+
+.output-resources .card:hover {
+    transform: translateY(-5px);
+}
+
+.output-resources .card h4 {
+    font-size: 1.1rem;
+    text-align: center;
+    color: #2a5d53;
+    margin-bottom: 0.5rem;
+}
+
+.output-resources .card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 0.5rem;
+}
+
+.output-resources .card p {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+/* Button Container */
+.button-container {
+    text-align: center;
+}
+
+.button-container .btn-submit {
+    background-color: #cd5278;
+    color: white;
+    padding: 10px 30px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.button-container .btn-submit:hover {
+    background-color: #b0446b;
+    transform: translateY(-3px);
+}
+
+/* Story Container */
+.story-container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    background-color: #fffacd;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Stories Grid */
+.stories-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.story-card {
+    background-color: #eaf9e5;
+    border: 1px solid #dcdcdc;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.story-card:hover {
+    transform: translateY(-5px);
+}
+
+.story-card p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #333;
+    line-height: 1.6;
+}
+
+.story-card strong {
+    font-size: 1rem;
+    color: #2a5d53;
+}
+
+.story-card em {
+    font-weight: bold;
+    color: #0d4c5f;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #2a5d53;
+    color: white;
+    font-size: 0.9rem;
+}
+
+footer a {
+    color: #f7e38d;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Wrapper Section */
+.resources-container {
+    display: flex;
+    justify-content: flex-end; /* Menggeser ke kanan */
+    align-items: center;
+    padding: 2rem;
+    min-height: 100vh; /* Tinggi full viewport */
+}
+
+/* Container Cards */
+.cards-wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem; /* Jarak antar card */
+    background-color: #fffacd;
+    border-radius: 12px;
+    padding: 1.5rem;
+}
+
+.stories-container-new {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 1rem;
+    min-height: 100vh;
+    background: linear-gradient(to bottom, #f8c6da, #ffe9c7);
+}
+
+.content-container {
+    width: 100%;
+    max-width: 1200px;
+    background-color: #fffacd;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Cards Styling */
+.cards-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+.story-card {
+    background: #eaf9e5;
+    border: 1px solid #d1e7dd;
+    border-radius: 8px;
+    width: 300px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    transition: transform 0.3s ease;
+}
+
+.story-card h3 {
+    font-size: 1.2rem;
+    color: #2a5d53;
+    margin-bottom: 0.5rem;
+}
+
+.story-card p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 0.5rem;
+}
+
+.story-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Navbar */
+.module-page-navbar {
+    display: flex;
+    justify-content: flex-end;
+    background: #FFF7E6;
+    padding: 1rem;
+}
+
+.module-page-navbar a {
+    margin: 0 10px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #333;
+}
+
+.module-section {
+    margin: 2rem auto;
+    width: 90%;
+    text-align: center;
+}
+
+.module-section h2 {
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+    color: #444;
+}
+
+/* Module Cards */
+.module-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+
+/* Page Title */
+.module-page-title {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.module-page-title h1 {
+    font-size: 2.5rem;
+    color: #333;
+}
+
+.module-page-title p {
+    font-size: 1rem;
+    color: #666;
+    margin-top: 0.5rem;
+}
+
+/* Cards Layout */
+.module-page-cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    padding: 1rem;
+}
+
+.module-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #333;
+    background: #E0F2F1;
+    border-radius: 10px;
+    width: 200px;
+    height: 100px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.module-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.module-card h3 {
+    margin: 1rem 0 0.5rem;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.module-card p {
+    padding: 0 1rem 1rem;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.module-card:hover {
+    background: #B2DFDB;
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BullyShield - Story Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <!-- Header Section -->
+    <header id="home">
+        <div class="logo">
+            <a href="/">
+                <img src="{{ url_for('static', filename='img/logo.png') }}" alt="BullyShield Logo" />
+            </a>
+        </div>
+        <nav class="navbar">
+            <a href="/">Home</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="result-container">
+        <section class="form-box">
+            <h1 class="title">Tell My Story</h1>
+            <div class="output-box">
+                <h2 class="success-msg">Your story has been sent!</h2>
+                <p>Your story has been analyzed and categorized as follows:</p>
+                
+                <!-- Display Categories -->
+                <div class="categories">
+                    {% for category, probability in categories %}
+                    <div class="category-item">
+                        <span><strong>{{ category }}</strong></span>: {{ (probability * 100) | round(2) }}%
+                    </div>
+                    {% endfor %}
+                </div>
+
+                <!-- Resources Section -->
+                <h3 class="resources-title">Here are resources to help you:</h3>
+                <div class="output-resources">
+                    <div class="card">
+                        <h4>Our Stories</h4>
+                        <img src="{{ url_for('static', filename='img/img8.jpg') }}" alt="Our Stories" class="resource-img">
+                        <p>Read inspiring stories from others.</p>
+                        <a href="/story" class="btn-primary">Click Here</a>
+                    </div>
+                    <div class="card">
+                        <h4>Modules</h4>
+                        <img src="{{ url_for('static', filename='img/img3.png') }}" alt="Modules" class="resource-img">
+                        <p>Learn through our recovery modules.</p>
+                        <a href="/modul" class="btn-primary">Click Here</a>
+                    </div>
+                </div>
+
+                <!-- Back to Home Button -->
+                <div class="button-container">
+                    <a href="/" class="btn-submit">Back to Home</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 BullyShield. All rights reserved.</p>
+    </footer>
+</body>
+</html>
